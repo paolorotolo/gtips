@@ -74,8 +74,13 @@
     <!-- API for Paper Input here: https://www.polymer-project.org/docs/elements/paper-elements.html#paper-input -->
     <paper-input label="Title" floatingLabel=true></paper-input>
     <br>
-    <paper-input label="Tip" floatingLabel=true></paper-input>
+        <paper-input-decorator label="Tip" floatingLabel>
+      <paper-autogrow-textarea>
+        <textarea></textarea>
+      </paper-autogrow-textarea>
+    </paper-input-decorator>
 
+    
                     <br><br>
 <h3>Image:</h3>       
     <br/>
