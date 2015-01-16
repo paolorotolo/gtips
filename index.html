@@ -70,12 +70,30 @@
                 <br/>
     <h1>Generate new Tip.</h1>
 <h3> Text: </h3>
+    
+    <!-- API for Paper Input here: https://www.polymer-project.org/docs/elements/paper-elements.html#paper-input -->
     <paper-input label="Title" floatingLabel=true></paper-input>
     <br>
     <paper-input label="Tip" floatingLabel=true></paper-input>
 
-                    <br/>
-                <br/>
+                    <br><br>
+<h3>Image:</h3>       
+    <br/>
+    
+    <!-- API for Dropdown menu here: https://www.polymer-project.org/docs/elements/paper-elements.html#paper-dropdown-menu -->
+    <paper-dropdown-menu label="Select a style:">
+    <paper-dropdown class="dropdown">
+        <core-menu class="menu">
+            <paper-item>Google+</paper-item>
+            <br><br>
+            <paper-item>Gmail</paper-item>
+            <br><br>
+            <paper-item>Search</paper-item>
+            <br><br>
+            <paper-item>Chrome</paper-item>
+        </core-menu>
+    </paper-dropdown>
+</paper-dropdown-menu>    
                 <br/>
                 <br/>
                 <br/>
