@@ -1,10 +1,10 @@
 <?php
-	//header('Content-type: image/png');
 	$originalImage = "sourceimg/".$_POST['imagetype'].".png";
 	$text = $_POST['text'];
 	$subtext  = $_POST['subtext'];
 	$marker = "www.alessiomoretto.com";
 	$sizeimgw = "497";
+	$sizeimgh = "497";
 	$filename = "img/".time()."_".rand(0,100).".png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
@@ -19,10 +19,10 @@
 	$color = imagecolorallocate($im, 255, 255, 255);
 	$fontfile = "font/Roboto.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $text);
-	if($tb[2]>$sizeimgw-40){//se troppo grande suddivido
+	if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
 		$textel = wordwrap($text, 39, "<br>");
 		$textel = explode("<br>",$textel);
-		$tb = imagettfbbox($size, $angle, $fontfile, $textel[0]);
+		$tb = imagettfbbox($size, $angle, $fontfile, $textel[0]);//capto larghezza
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $textel[0]);
 		$tb = imagettfbbox($size, $angle, $fontfile, $textel[1]);
@@ -48,7 +48,7 @@
 	$size = 10; 
 	$angle = 0;
 	$x = 5; 
-	$y = $sizeimgw-10;
+	$y = $sizeimgh-10;
 	$color = imagecolorallocate($im, 200, 200, 200);
 	$fontfile = "font/Roboto.ttf";
 	imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $marker);
@@ -57,5 +57,5 @@
 	$outputImage = $filename;
 	imagepng($im, $outputImage, 0);
 	imagedestroy($im);
-	print '<img src="'.$filename.'" alt="" />';
+	print '<a href="../makememe/'.$filename.'" target="_blank"><img src="../makememe/'.$filename.'" alt="" /></a>';
 ?>
