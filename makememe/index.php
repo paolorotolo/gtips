@@ -1,8 +1,8 @@
 <?php
 	//header('Content-type: image/png');
-	$originalImage = "sourceimg/google.png";
-	$text = "bene, funziona anche con i testi più lunghi, limitare a 72 caretteri direi";
-	$subtext = "#googleplustips";
+	$originalImage = "sourceimg/".$_POST['imagetype'].".png";
+	$text = $_POST['text'];
+	$subtext  = $_POST['subtext'];
 	$marker = "www.alessiomoretto.com";
 	$sizeimgw = "497";
 	$filename = "img/".time()."_".rand(0,100).".png";
