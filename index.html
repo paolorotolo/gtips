@@ -11,114 +11,77 @@
         <script type="text/javascript" src="./resources/js/main.js"></script>
         <script src="./resources/js/smooth-scroll.min.js"></script>
     </head>
-    <body >
-        <section id="home">
-            <div class="content">
-                <h1 class="title">GTips</h1>
-                <h2 class="subtitle">Google Tips Generator.</h2>
-                </div>
-                <br/>
-<a data-scroll href="/#content"> <paper-button raised class="button">Generate new tip           
-                    
-            </paper-button></a>
-            <br>
-            <br>
-                            <paper-button id="download" raised class="button">About
-            
-                    
-            </paper-button>
-            
-                <br/>                
-                <br/>
-                <br/>
-                <br/>
+<body >
+<section id="home">
+	<div class="content">
+		<h1 class="title">GTips</h1>
+		<h2 class="subtitle">Google Tips Generator.</h2>
+	</div>
+	<br/>
+	<a data-scroll href="/#content"> <paper-button raised class="button">Generate new tip</paper-button></a>
+	<br>
+	<br>
+    <paper-button id="download" raised class="button">About</paper-button>
+	<br>
+	<br>
+	<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+	<br>
+	<br>
+	<script type="text/javascript">
+		  window.___gcfg = {lang: 'en'};
 
-                <!-- Inserisci questo tag nel punto in cui vuoi che sia visualizzato l'elemento pulsante +1. -->
-<div class="g-plusone" data-annotation="inline" data-width="300"></div>
-
-<!-- Inserisci questo tag dopo l'ultimo tag di pulsante +1. -->
-<script type="text/javascript">
-  window.___gcfg = {lang: 'en'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-                </div>
-            </div>
-        </section>
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/platform.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+	</script>
+</section>
 
 <section id="content">
-                    <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-    <h1>Generate new Tip.</h1>
-<h3> Text: </h3>
-    
+	<br/>
+	<h1>Generate new Tip.</h1>
+	
     <!-- API for Paper Input here: https://www.polymer-project.org/docs/elements/paper-elements.html#paper-input -->
-    <paper-input label="Title" floatingLabel=true></paper-input>
-    <br>
-        <paper-input-decorator label="Tip" floatingLabel>
+	<paper-input-decorator label="Tip" floatingLabel>
       <paper-autogrow-textarea>
         <textarea></textarea>
       </paper-autogrow-textarea>
     </paper-input-decorator>
-
-    
-                    <br><br>
-<h3>Image:</h3>       
-    <br/>
-    
+	<br>
+    <paper-input label="Subtitle" floatingLabel=true></paper-input>
+	<br><br><br>
     <!-- API for Dropdown menu here: https://www.polymer-project.org/docs/elements/paper-elements.html#paper-dropdown-menu -->
     <paper-dropdown-menu label="Select a style:">
-    <paper-dropdown class="dropdown">
-        <core-menu class="menu">
-            <paper-item>Google+</paper-item><br><br>
-            <paper-item>Gmail</paper-item><br><br>
-            <paper-item>Search</paper-item><br><br>
-            <paper-item>Chrome</paper-item>
-        </core-menu>
-    </paper-dropdown>
-</paper-dropdown-menu>    
-                <br/>
-                <br/>
-                <br/>
-        <paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+		<paper-dropdown class="dropdown">
+			<core-menu class="menu">
+				<paper-item>Google+</paper-item><br><br>
+				<paper-item>Gmail</paper-item><br><br>
+				<paper-item>Search</paper-item><br><br>
+				<paper-item>Chrome</paper-item>
+			</core-menu>
+		</paper-dropdown>
+	</paper-dropdown-menu>    
+    <br><br><br>
+	<paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab>
+    <br><br><br><br><br><br><br>
 </section>
-            </a>
-            <!-- Dialog -->
-<paper-dialog heading="About GTips" transition="core-transition-center">
-    
+
+<!-- Dialog -->
+<paper-dialog heading="About GTips" transition="core-transition-center">  
     <span style="color: #333333"><h4> Team </h4></span>
         <p>write something here...</p>
-    <br>
-    
+    <br> 
     <span style="color: #333333"><h4> Open Source </h4></span>
-    <p>Sources are available on <a href="https://github.com/PaoloRotolo/gtips">GitHub.</a></p>
-    
+    <p>Sources are available on <a href="https://github.com/PaoloRotolo/gtips">GitHub.</a></p>  
 </paper-dialog>
+<footer>
+GTips &#169; 2014 The GTips team. Google and Google logo are trademarks of Google Inc. All rights reserved.
+</footer>
 
-        <footer>
-            GTips &#169; 2014 The GTips team. Google and Google logo are trademarks of Google Inc. All rights reserved.
-            <script>
+<script>
     smoothScroll.init();
 </script>
-        </footer>
-    </body>
+        
+</body>
 </html>
