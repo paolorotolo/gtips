@@ -57,5 +57,5 @@
 	$outputImage = $filename;
 	imagepng($im, $outputImage, 0);
 	imagedestroy($im);
-	print '<a href="../makememe/'.$filename.'" target="_blank"><img src="../makememe/'.$filename.'" alt="" /></a>';
+	print '<a href="makememe/'.$filename.'" target="_blank"><img src="makememe/'.$filename.'" alt="" /></a>';
 ?>
