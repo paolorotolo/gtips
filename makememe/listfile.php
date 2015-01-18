@@ -41,6 +41,7 @@ print '<ul class="tabs">
       </ul>';
 $listaserv = array("adsense","adwords","analytics","android","chrome","drive","gmail","google","googleplus","hangouts","maps","mybusiness","news","playstore","webmaster","youtube");
 
+print '<div class="row">';
 for($z=0;$z<count($listaserv);$z++){
 	print "<div id='".$listaserv[$z]."'>";	  
 	for($i=0;$i<count($arrayfile);$i++){
@@ -56,4 +57,5 @@ for($z=0;$z<count($listaserv);$z++){
 	}
 	print "</div>";
 }
+print "</div>";
 ?>
