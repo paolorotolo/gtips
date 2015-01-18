@@ -22,7 +22,7 @@ $arrayfile=array();
 $arrayfile=elencafiles("makememe/selectedimg/",$array_extimg);
 
 for($i=0;$i<count($arrayfile);$i++){
- echo "<a href='makememe/selectedimg/".$arrayfile[$i]."'>".$arrayfile[$i]."</a>";
+ echo "<a href='makememe/selectedimg/".$arrayfile[$i]."'><img src='makememe/selectedimg/".$arrayfile[$i]."' /></a>";
 }
 
 ?>
