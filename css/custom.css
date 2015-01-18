@@ -1,3 +1,57 @@
+h1 {
+    font-weight: 300;
+    font-size: xx-large;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: x-large;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: large;
+}
+
+#home {
+    height: 100%;
+    background-color: #32aad8;
+    background-image: url(../img/bg.jpg);
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow-x:scroll;    
+}
+
+#home a {
+    color: #fff;
+}
+
+#home a:focus, #home a:hover {
+}
+
+#home .title {
+    display: inline-block;
+    position: relative;
+    font-size: 500%;
+}
+
+#home .subtitle {
+    position: relative;
+    font-size: 200%;
+}
+
+.content { padding: 5% 0; }
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 .tabs li.tab a {
 	font-size: 9px;
 }
@@ -11,3 +65,10 @@ li.tab.col.s3 {
 .tabs li.tab a.active {
 	color: #f8c1c3;
 }
+
+#home {
+height: 100%;
+width: 100%;
+}
+
+con
