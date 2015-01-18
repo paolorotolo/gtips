@@ -7,6 +7,7 @@
 	  <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
 	  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
     </head>
 
 <body>
@@ -16,9 +17,9 @@
       <div class="container">
 	  <a href="#" class="brand-logo">GTips</a>
       <ul id="nav-mobile" class="right side-nav">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#tips">Tips</a></li>
-        <li><a href="#support">Support</a></li>
+        <li><a data-scroll href="#top">Home</a></li>
+        <li><a data-scroll href="#tips">Tips</a></li>
+        <li><a data-scroll href="#support">Support</a></li>
       </ul>
 	  <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
 	  </div>
@@ -118,6 +119,9 @@
             <a class="grey-text text-lighten-4 right" target="_blank" href="http://www.alessiomoretto.com">Developed by: alessiomoretto.com</a>
             </div>
           </div>
+            <script>
+                smoothScroll.init();
+            </script>
         </footer>
 
 <script>
