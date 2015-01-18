@@ -49,7 +49,7 @@ for($z=0;$z<count($listaserv);$z++){
 			print "<div class='col s3 center'>
 			<img class='responsive-img materialboxed' src='makememe/selectedimg/".$arrayfile[$i]."' />
 			<div><br>
-			<a class='indigo waves-effect waves-light btn-large' href='makememe/selectedimg/".$arrayfile[$i]."' target='_blank'><i class='mdi-file-file-download left'></i> Download</a><br><br>
+			<a class='blue waves-effect waves-light btn-large' href='makememe/selectedimg/".$arrayfile[$i]."' target='_blank'><i class='mdi-file-file-download left'></i> Download</a><br><br>
 			</div>
 			</div>";
 		}

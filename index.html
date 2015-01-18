@@ -2,7 +2,6 @@
     <head>
       <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width">
 	  <title>Gtips - Crea il Tips Personalizzato per i Prodotti Google</title>
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	  <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
@@ -12,9 +11,9 @@
     </head>
 
 <body>
-<div class="nav-wrapper">
+<div class="navbar-fixed">
   <nav>
-    <div class="nav-wrapper blue">
+    <div class="nav-wrapper indigo">
       <div class="container">
 	  <a href="#" class="brand-logo">GTips</a>
       <ul id="nav-mobile" class="right side-nav">
@@ -37,7 +36,7 @@
        <a href="#tips" data-scroll class="waves-effect waves-light btn-large yellow" style="color:#333333;"><i class="mdi-hardware-keyboard-arrow-right left"></i>Create New Tip</a>
             <br>
             <br>
-               <a href="#tips" class="blue waves-effect waves-light btn-large"><i class="mdi-action-info-outline left"></i>About</a>
+               <a href="#tips" class="indigo waves-effect waves-light btn-large"><i class="mdi-action-info-outline left"></i>About</a>
                 <br/>                
                 <br/>
                 <br/>
@@ -61,10 +60,10 @@
 	<div class="row">
 		<div class="col s12">
 			<h1>New Tip.</h1>
-			<br><br><p><strong>Istruzioni</strong><br>
-			Inserisci il tips (massimo 75 caratteri)<br>
-			Inserisci l'url o l'hashtag (puoi usare <a target="_blank" href="http://goo.gl/">goo.gl</a> per accorciare l'url)<br>
-			Scegli il servizio<br><br>
+			<br><br><p><strong>Instructions</strong><br>
+			Include tips (maximum 75 characters)<br>
+			Enter the url or the hashtag (you can use <a target="_blank" href="http://goo.gl/">goo.gl</a> to shorten the url)<br>
+			Choose the service<br><br>
 			</p>
 		</div> 
 	</div> 
@@ -72,14 +71,14 @@
   
 <div class="container">
 	<div class="row">
-	  <form id="makememe" class="col s12 m6">
+	  <form id="makememe" class="col s6">
 	  <h3>Generate</h3>
 		<div class="row">
-		  <div class="input-field col s12 m6">
+		  <div class="input-field col s6">
 			<input name="text" id="first_name" type="text" maxlength="75" class="validate">
 			<label for="first_name">Tips</label>
 		  </div>
-		  <div class="input-field col s12 m6">
+		  <div class="input-field col s6">
 			<input name="subtext" type="text"  maxlength="30" class="validate">
 			<label for="last_name">Tags/Short Url</label>
 		  </div>
@@ -134,7 +133,7 @@
 	  <br><br>
 	</div>
 </div>
-<footer class="blue">
+<footer class="indigo">
 		<div class="container">
             <div class="row">
             <div class="col s12 white-text">
@@ -160,7 +159,6 @@
 	$('.collapsible').collapsible();//collapse elementi
 	$('.materialboxed').materialbox();//lightbox
 	
-     
 	$("#makememe").submit(function() {//invio form
     var url = "makememe/index.php";
     $.ajax({
