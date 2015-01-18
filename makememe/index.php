@@ -2,10 +2,10 @@
 	$originalImage = "sourceimg/".$_POST['imagetype'].".png";
 	$text = $_POST['text'];
 	$subtext  = $_POST['subtext'];
-	$marker = "www.alessiomoretto.com";
+	$marker = "Top Contributor e Astri Nascenti Google Italia";
 	$sizeimgw = "497";
 	$sizeimgh = "497";
-	$filename = "img/".time()."_".rand(0,100).".png";
+	$filename = "img/".$_POST['imagetype'].time()."_".rand(0,100).".png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
 		die("im is null");
@@ -17,7 +17,7 @@
 	$y = 320;
 	$y2 = 360;
 	$color = imagecolorallocate($im, 255, 255, 255);
-	$fontfile = "font/Roboto.ttf";
+	$fontfile = "font/Roboto-Black.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $text);
 	if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
 		$textel = wordwrap($text, 39, "<br>");
@@ -38,7 +38,7 @@
 	$angle = 0;
 	$x = 75; 
 	$y = 420;
-	$color = imagecolorallocate($im, 200, 200, 200);
+	$color = imagecolorallocate($im, 230, 230, 230);
 	$fontfile = "font/Roboto.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $subtext);
 	$x = ceil(($sizeimgw - $tb[2]) / 2);
@@ -49,7 +49,7 @@
 	$angle = 0;
 	$x = 5; 
 	$y = $sizeimgh-10;
-	$color = imagecolorallocate($im, 200, 200, 200);
+	$color = imagecolorallocate($im, 230, 230, 230);
 	$fontfile = "font/Roboto.ttf";
 	imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $marker);
 	
