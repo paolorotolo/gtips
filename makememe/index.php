@@ -1,11 +1,20 @@
 <?php
+	$files = glob('img/*'); // get all file names
+	foreach($files as $file){ // iterate files
+	  if(is_file($file))
+		$getdate = explode("_",$file);
+		if($getdate[1]<=time()-"600"){//cancello solo file vecchi di 10 minuti
+			unlink($file); // delete file
+		}
+		
+	}
 	$originalImage = "sourceimg/".$_POST['imagetype'].".png";
 	$text = $_POST['text'];
 	$subtext  = $_POST['subtext'];
 	$marker = "Top Contributor e Astri Nascenti Google Italia";
-	$sizeimgw = "497";
-	$sizeimgh = "497";
-	$filename = "img/".$_POST['imagetype'].time()."_".rand(0,100).".png";
+	$sizeimgw = "504";
+	$sizeimgh = "503";
+	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100).".png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
 		die("im is null");
