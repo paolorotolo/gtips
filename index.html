@@ -4,27 +4,30 @@
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	  <title>Gtips - Crea il Tips Personalizzato per i Prodotti Google</title>
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	  <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
 	  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
     </head>
 
 <body>
-<nav>
+<div class="navbar-fixed">
+  <nav>
     <div class="nav-wrapper indigo">
       <div class="container">
-	  <a href="#" class="brand-logo right">GTips</a>
-      <ul id="nav-mobile" class="left side-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tips.html">Tips</a></li>
-        <li><a href="support.html">Support</a></li>
+	  <a href="#" class="brand-logo">GTips</a>
+      <ul id="nav-mobile" class="right side-nav">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#support">Support</a></li>
       </ul>
 	  <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
 	  </div>
     </div>
   </nav>
+</div>
   
 <div class="container">
-	<div class="row">
+	<div class="row" id="top">
 		<div class="col s12">
 			<h1>Gtpis</h1>
 			<br><br><p><strong>Istruzioni</strong><br>
@@ -38,7 +41,8 @@
   
 <div class="container">
 	<div class="row">
-	  <form id="makememe" class="col s12">
+	  <form id="makememe" class="col s6">
+	  <h3>Generate</h3>
 		<div class="row">
 		  <div class="input-field col s6">
 			<input name="text" id="first_name" type="text" maxlength="75" class="validate">
@@ -73,75 +77,41 @@
 			  </select>
 		  </div>
 		</div>
-            <a class="btn-floating right btn-large waves-effect waves-light red"><i class="mdi-content-add"></i></a>
-
-
+		<button class="indigo btn-floating btn-large waves-effect waves-light right" type="submit" name="action">
+			<i class="mdi-content-send"></i>
+		</button>
 	  </form>
 	  
-	  <div class="col s12">
-		<div id="memeresult"></div>
+	  <div class="col s6">
+		<h3>Preview</h3>
+		<div id="memeresult" class="center"></div>
+	  </div>
+	  
+	  <br><br>
+	  
+	  <div class="col s12" id="tips">
+		<h3>List tips</h3>
+		<div id="listtips"></div>
+	  </div>
+	  <br><br>
+	  
+	  
+	   <div class="col s12" id="support">
+		<h3>Support</h3>
+		To do
 	  </div>
 	  <br><br>
 	</div>
 </div>
 
-<!--<div class="container">
-<h2>Meet the team</h2>
-	<div class="row">
-	  <div class="col s12 m12">
-	  
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
-              <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle responsive-img"> 
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it appear circular.
-              </span>
+<footer class="indigo">
+		<div class="container">
+            <div class="row">
+            <div class="col s12 white-text">
+			Made with <3 in Italy
             </div>
           </div>
-        </div>
-		
-		<h3>How to get support</h3>
-		 <ul class="collapsible">
-        <li>
-          <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>Community</div>
-          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="mdi-maps-place"></i>Forum</div>
-          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Support site</div>
-          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-		<li>
-          <div class="collapsible-header"><i class="mdi-social-whatshot"></i>Phone (limited)</div>
-          <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-        </li>
-      </ul>
-		
-      </div>
-	</div>
-</div>-->
-<footer>
-         <!-- <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </div>
-            </div>
-          </div>-->
+		  </div>
           <div class="footer-copyright">
             <div class="container">
             Google and Google logo are trademarks of Google Inc. All rights reserved.
@@ -151,11 +121,11 @@
         </footer>
 
 <script>
-(function($){
-  $(function(){
+ $(document).ready(function(){
 	$('select').not('.disabled').material_select();//attiva select
 	$(".button-collapse").sideNav();//collapse menu mobile
 	$('.collapsible').collapsible();//collapse elementi
+	$('.materialboxed').materialbox();//lightbox
 	
 	$("#makememe").submit(function() {//invio form
     var url = "makememe/index.php";
@@ -171,8 +141,21 @@
     return false;
 	});
 	
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+	
+	var url = "makememe/listfile.php";
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: "",//$("#makememe").serialize(),
+           success: function(data)
+           {
+               $("#listtips").html(data);//mostro risultato
+			   $('ul.tabs').tabs();//attivo tabs
+			   $('.materialboxed').materialbox();//lightbox
+           }
+         });
+	
+});
 </script> 
 </body>
 </html>

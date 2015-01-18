@@ -1,0 +1,13 @@
+.tabs li.tab a {
+	font-size: 9px;
+}
+li.tab.col.s3 {
+	width: auto !important;
+	padding: 0 5px;
+}
+.tabs .indicator {
+	display: none;
+}
+.tabs li.tab a.active {
+	color: #f8c1c3;
+}

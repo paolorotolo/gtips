@@ -66,5 +66,6 @@
 	$outputImage = $filename;
 	imagepng($im, $outputImage, 0);
 	imagedestroy($im);
-	print '<a href="makememe/'.$filename.'" target="_blank"><img src="makememe/'.$filename.'" alt="" /></a>';
+	print '<a href="makememe/'.$filename.'" target="_blank"><img class="responsive-img" src="makememe/'.$filename.'" alt="" /></a><br><br>
+	<a class="indigo waves-effect waves-light btn-large" href="makememe/'.$filename.'" target="_blank"><i class="mdi-file-file-download left"></i> Download</a>';
 ?>
