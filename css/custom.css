@@ -27,6 +27,18 @@ h3 {
     overflow-x:scroll;    
 }
 
+#newTip {
+background-color: #f9f9f9;
+        height: 100%;
+
+    overflow-x:scroll;  
+}
+
+#support {
+        height: auto;
+background-color: #dedede;
+}
+
 #home a {
     color: #fff;
 }
