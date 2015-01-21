@@ -128,13 +128,13 @@ if($_POST["style"]=="1"){
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $textel[1]);
 		
-		$tb = imagettfbbox($size, $angle, $fontfile, $textel[2]);
+		$tb = imagettfbbox($size, $angle, $fontfile, @$textel[2]);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , $textel[2]);
+		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , @$textel[2]);
 		
-		$tb = imagettfbbox($size, $angle, $fontfile, $textel[3]);
+		$tb = imagettfbbox($size, $angle, $fontfile, @$textel[3]);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , $textel[3]);
+		imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , @$textel[3]);
 	}else{
 		$tb = imagettfbbox($size, $angle, $fontfile, $text);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
