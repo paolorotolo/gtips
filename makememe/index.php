@@ -9,11 +9,12 @@ $files = glob('img/*'); // get all file names
 		
 	}
 
+$text = $_POST['text'];
+$subtext  = $_POST['subtext'];
+$marker = "Top Contributor e Astri Nascenti Google Italia";
+	
 if($_POST["style"]=="1"){
-	$originalImage = "sourceimg/".$_POST['imagetype'].".png";
-	$text = $_POST['text'];
-	$subtext  = $_POST['subtext'];
-	$marker = "Top Contributor e Astri Nascenti Google Italia";
+	$originalImage = "sourceimg/".$_POST['imagetype'].".png";	
 	$sizeimgw = "504";
 	$sizeimgh = "503";
 	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100).".png";
@@ -75,9 +76,7 @@ if($_POST["style"]=="1"){
 	
 	
 	
-	$originalImage = "sourceimg/googlenow2.png";
-	$text = $_POST['text'];
-	$marker = "Top Contributor e Astri Nascenti Google Italia";
+	$originalImage = "sourceimg/".$_POST['imagetype']."2.png";
 	$sizeimgw = "900";
 	$sizeimgh = "470";
 	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100).".png";
@@ -86,9 +85,23 @@ if($_POST["style"]=="1"){
 		die("im is null");
 	}
 	
-	$logoimg = imagecreatefrompng($_POST['fileurl']);//creo immagine logo da mettere sopra
+	if ($_POST['fileurl']!=""){
+		$logoimg = imagecreatefrompng($_POST['fileurl']);//creo immagine logo da mettere sopra
+		imagecopy($im, $logoimg, 0,0,0,0, $sizeimgw, $sizeimgh);
+	}elseif(isset($_POST['background'])){
+		$logoimg = imagecreatefromjpeg("background/bg".$_POST['background'].".jpg");//creo immagine logo da mettere sopra
+		if ($_POST['grayscale']=="on"){
+			imagefilter($logoimg, IMG_FILTER_GRAYSCALE);
+		}
+		if ($_POST['brightness']!=""){
+			imagefilter($logoimg, IMG_FILTER_BRIGHTNESS, $_POST['brightness']);
+		}
+		if ($_POST['contrast']!=""){
+			imagefilter($logoimg, IMG_FILTER_CONTRAST, $_POST['contrast']);
+		}
+		imagecopy($im, $logoimg, 0,0,0,0, $sizeimgw, $sizeimgh);
+	}
 	
-	imagecopy($im, $logoimg, 0,0,0,0, $sizeimgw, $sizeimgh);
 	
 	$originalImage = imagecreatefrompng($originalImage);//creo immagine logo da mettere sopra
 	imagecopy($im, $originalImage, 0,0,0,0, $sizeimgw, $sizeimgh);
@@ -96,25 +109,47 @@ if($_POST["style"]=="1"){
 	
 	$size = 25; 
 	$angle = 0;
-	$y = 120;
-	$y2 = 160;
+	$y = 260;
+	$y2 = 300;
+	$y3 = 340;
+	$y4 = 380;
 	$color = imagecolorallocate($im, 255, 255, 255);
-	$fontfile = "font/Roboto-Thin.ttf";
+	$fontfile = "font/Roboto-Black.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $text);
 	if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
-		$textel = wordwrap($text, 39, "<br>");
+		$textel = wordwrap($text, 50, "<br>");
 		$textel = explode("<br>",$textel);
+		
 		$tb = imagettfbbox($size, $angle, $fontfile, $textel[0]);//capto larghezza
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $textel[0]);
+		
 		$tb = imagettfbbox($size, $angle, $fontfile, $textel[1]);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $textel[1]);
+		
+		$tb = imagettfbbox($size, $angle, $fontfile, $textel[2]);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , $textel[2]);
+		
+		$tb = imagettfbbox($size, $angle, $fontfile, $textel[3]);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , $textel[3]);
 	}else{
 		$tb = imagettfbbox($size, $angle, $fontfile, $text);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $text);
 	}
+	
+	$size = 20; 
+	$angle = 0;
+	$x = 75; 
+	$y = 430;
+	$color = imagecolorallocate($im, 230, 230, 230);
+	$fontfile = "font/Roboto-Black.ttf";
+	$tb = imagettfbbox($size, $angle, $fontfile, $subtext);
+	$x = ceil(($sizeimgw - $tb[2]) / 2);
+	imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $subtext);
 	
 	
 	$size = 10; 
