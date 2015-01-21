@@ -87,8 +87,17 @@ if($_POST["style"]=="1"){
 	
 	if ($_POST['fileurl']!=""){
 		$logoimg = imagecreatefrompng($_POST['fileurl']);//creo immagine logo da mettere sopra
+		if ($_POST['grayscale']=="on"){
+			imagefilter($logoimg, IMG_FILTER_GRAYSCALE);
+		}
+		if ($_POST['brightness']!=""){
+			imagefilter($logoimg, IMG_FILTER_BRIGHTNESS, $_POST['brightness']);
+		}
+		if ($_POST['contrast']!=""){
+			imagefilter($logoimg, IMG_FILTER_CONTRAST, $_POST['contrast']);
+		}
 		imagecopy($im, $logoimg, 0,0,0,0, $sizeimgw, $sizeimgh);
-	}elseif(isset($_POST['background'])){
+	}elseif($_POST['background']!="none"){
 		$logoimg = imagecreatefromjpeg("background/bg".$_POST['background'].".jpg");//creo immagine logo da mettere sopra
 		if ($_POST['grayscale']=="on"){
 			imagefilter($logoimg, IMG_FILTER_GRAYSCALE);
