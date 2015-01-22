@@ -10,15 +10,15 @@ $(document).ready(function() {
         
         // If style is Small, hide other options;
         if (style === "Small"){
-            $("#style2").hide();
+            $("#style2").hide(400);
         
         // If not, show them;
         } else if (style === "Large") {
-            $("#style2").show();
+            $("#style2").show(400);
             $("#background").hide();
             
         } else {
-            $("#style2").show();
+            $("#style2").show(400);
             $("#background").show();
         };
     };
