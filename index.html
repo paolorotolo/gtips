@@ -97,7 +97,7 @@
 			<label for="last_name">Tags/Short Url</label>
 		  </div>
 		</div>
-        <div class="row">
+        <div class="row eventschange">
 		  <div class="col s12">
 			<label>Style</label>
 			  <select name="style" >
@@ -171,6 +171,7 @@
 				<option value="hangouts">Hangouts</option>
 				<option value="chrome">Chrome</option>
 				<option value="maps">Maps</option>
+				<option value="docs">Docs</option>
 				<option value="webmaster">Webmaster</option>
 				<option value="news">News</option>
 				<option value="adsense">AdSense</option>
@@ -488,6 +489,7 @@
 
 <script>
  $(document).ready(function(){
+
 	$('select').not('.disabled').material_select();//attiva select
 	$(".button-collapse").sideNav();//collapse menu mobile
 	$('.collapsible').collapsible();//collapse elementi
@@ -520,6 +522,10 @@
 			   $('.materialboxed').materialbox();//lightbox
            }
          });
+	
+	$('.eventschange').bind("DOMSubtreeModified",function(){
+		alert('changed');
+	});
 	
 });
 </script> 
