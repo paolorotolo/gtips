@@ -100,7 +100,7 @@
         <div class="row eventschange">
 		  <div class="col s12">
 			<label>Style</label>
-			  <select name="style" >
+			  <select name="style" id="style" >
 				<option value="1">Small</option>
 				<option value="2" >Large with Background</option>
                 <option value="3" >Large</option>
@@ -109,7 +109,7 @@
 		</div>
     <div id="style2">
 		<div class="row">
-		  <div class="col s12">
+		  <div class="col s12" id="background">
 			<label>Background</label>
 			  <select name="background">
 			    <option value="none">None</option>
@@ -522,10 +522,6 @@
 			   $('.materialboxed').materialbox();//lightbox
            }
          });
-	
-	$('.eventschange').bind("DOMSubtreeModified",function(){
-		alert('changed');
-	});
 	
 });
 </script> 
