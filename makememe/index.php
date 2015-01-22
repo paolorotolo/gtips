@@ -20,7 +20,7 @@ if($_POST["style"]=="1"){
 	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100).".png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
-		die("im is null");
+		die("Please select Product");
 	}
 	
 	
@@ -82,7 +82,7 @@ if($_POST["style"]=="1"){
 	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100).".png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
-		die("im is null");
+		die("Please select Product");
 	}
 	
 	if ($_POST['fileurl']!=""){
@@ -183,7 +183,7 @@ if($_POST["style"]=="1"){
 	$filename = "img/".$_POST['imagetype']."_".time()."_".rand(0,100)."3.png";
 	$im = imagecreatefrompng($originalImage);
 	if(!$im) {
-		die("im is null");
+		die("Please select Product");
 	}
 	
 	
