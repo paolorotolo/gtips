@@ -17,11 +17,13 @@ $(document).ready(function() {
             $("#style2").show(400);
             $("#background").hide();
             $("#url").hide();
+            $("grayscale").hide();
             
         } else {
             $("#style2").show(400);
             $("#background").show();
             $("#url").show();
+            $("grayscale").show();
         };
     };
 });
