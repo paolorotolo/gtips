@@ -16,10 +16,12 @@ $(document).ready(function() {
         } else if (style === "Large") {
             $("#style2").show(400);
             $("#background").hide();
+            $("#url").hide();
             
         } else {
             $("#style2").show(400);
             $("#background").show();
+            $("#url").show();
         };
     };
 });
