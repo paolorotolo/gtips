@@ -20,6 +20,7 @@ $(document).ready(function() {
             $("#grayscale2").hide();
             
         } else {
+            alert(style);
             $("#style2").show(400);
             $("#background").show();
             $("#url").show();
