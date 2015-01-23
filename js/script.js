@@ -6,21 +6,20 @@ $(document).ready(function() {
     });
     
     function checkDropDown(){
-        var style = $('#style').find(":selected").text();
-        
+        var style = $('#style').find(":selected").val();
+		console.log(style);
         // If style is Small, hide other options;
-        if (style === "Small"){
+        if (style === "1"){
             $("#style2").hide(400);
         
         // If not, show them;
-        } else if (style === "Large") {
+        } else if (style === "2") {
             $("#style2").show(400);
             $("#background").hide();
             $("#url").hide();
             $("#grayscale2").hide();
             
         } else {
-            alert(style);
             $("#style2").show(400);
             $("#background").show();
             $("#url").show();

@@ -109,7 +109,7 @@ textdomain("messages");
         <div class="row eventschange">
 		  <div class="col s12">
 			<label><?php print _("Style"); ?></label>
-			  <select name="style" >
+			  <select name="style"  id="style">
 				<option value="1"><?php print _("Small"); ?></option>
 				<option value="2" ><?php print _("Large with Background"); ?></option>
                 <option value="3" ><?php print _("Large"); ?></option>
@@ -118,7 +118,7 @@ textdomain("messages");
 		</div>
     <div id="style2">
 		<div class="row">
-		  <div class="col s12">
+		  <div class="col s12" id="background">
 			<label><?php print _("Background"); ?></label>
 			  <select name="background">
 			    <option value="none"><?php print _("None"); ?></option>
@@ -131,7 +131,7 @@ textdomain("messages");
 		</div>
 		
 		<div class="row">
-		  <div class="col s12">
+		  <div class="col s12" id="grayscale2">
 		    <p>
 			<input type="checkbox" name="grayscale" id="grayscale"  />
 			<label for="grayscale"><?php print _("Grayscale"); ?></label>
