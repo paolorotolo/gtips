@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-01-23 21:36+0100\n"
+"PO-Revision-Date: 2015-01-23 21:44+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: /home/paolo/Development/gtips/index.php\n"
+
+#: /home/paolo/Development/gtips/index.php:16
+msgid "Gtips - Create Custom Tips for Google Products"
+msgstr "Gtips - Crea Tips personalizzati per i Prodotti Google"
+
+#: /home/paolo/Development/gtips/index.php:40
+#: /home/paolo/Development/gtips/index.php:54
+msgid "GTips"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:40
+msgid "Beta"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:42
+msgid "Home"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:43
+#: /home/paolo/Development/gtips/index.php:220
+msgid "Tips"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:44
+#: /home/paolo/Development/gtips/index.php:61
+#: /home/paolo/Development/gtips/index.php:364
+msgid "Support"
+msgstr "Supporto"
+
+#: /home/paolo/Development/gtips/index.php:55
+msgid "Create Custom Tips for Google Products"
+msgstr "Crea Tips personalizzati per i Prodotti Google"
+
+#: /home/paolo/Development/gtips/index.php:58
+msgid "Create New Tip"
+msgstr "Crea nuovo Tip"
+
+#: /home/paolo/Development/gtips/index.php:85
+msgid "New Tip"
+msgstr "Nuovo Tip"
+
+#: /home/paolo/Development/gtips/index.php:86
+msgid "Instructions"
+msgstr "Istruzioni"
+
+#: /home/paolo/Development/gtips/index.php:87
+msgid "Include tips (maximum 75 characters for style 1 and 3, 200 for style 2)"
+msgstr "Aggiungi i tips (massimo 75 caratteri per lo stile 1 e 3, 200 per lo stile 2)"
+
+#: /home/paolo/Development/gtips/index.php:88
+msgid "Enter the url or the hashtag (you can use"
+msgstr "Inserisci l'URL o l'hashtag (puoi usare"
+
+#: /home/paolo/Development/gtips/index.php:88
+msgid "to shorten the url)"
+msgstr "per ridurre l'URL)"
+
+#: /home/paolo/Development/gtips/index.php:89
+msgid "Choose the service"
+msgstr "Scegli il servizio"
+
+#: /home/paolo/Development/gtips/index.php:98
+msgid "Generate"
+msgstr "Genera"
+
+#: /home/paolo/Development/gtips/index.php:104
+msgid "Advanced tips insert"
+msgstr "Inserimento Tips avanzato"
+
+#: /home/paolo/Development/gtips/index.php:114
+msgid "Tips first row"
+msgstr "Tips prima riga"
+
+#: /home/paolo/Development/gtips/index.php:117
+#: /home/paolo/Development/gtips/index.php:169
+msgid "Font Size"
+msgstr "Grandezza Font"
+
+#: /home/paolo/Development/gtips/index.php:152
+#: /home/paolo/Development/gtips/index.php:204
+msgid "Font Family"
+msgstr "Famiglia Font"
+
+#: /home/paolo/Development/gtips/index.php:166
+msgid "Tips second row"
+msgstr "Tips seconda riga"
+
+#: /home/paolo/Development/gtips/index.php:227
+msgid "Tags/Short Url"
+msgstr "Tags/URL"
+
+#: /home/paolo/Development/gtips/index.php:235
+msgid "Display Copyright"
+msgstr "Mostra Copyright"
+
+#: /home/paolo/Development/gtips/index.php:243
+msgid "Copyright text"
+msgstr "Testo Copyright"
+
+#: /home/paolo/Development/gtips/index.php:249
+msgid "Style"
+msgstr "Stile"
+
+#: /home/paolo/Development/gtips/index.php:251
+msgid "Small"
+msgstr "Piccolo"
+
+#: /home/paolo/Development/gtips/index.php:252
+msgid "Large with Background"
+msgstr "Largo con sfondo"
+
+#: /home/paolo/Development/gtips/index.php:253
+msgid "Large"
+msgstr "Largo"
+
+#: /home/paolo/Development/gtips/index.php:260
+msgid "Background"
+msgstr "Sfondo"
+
+#: /home/paolo/Development/gtips/index.php:262
+msgid "None"
+msgstr "Nessuno"
+
+#: /home/paolo/Development/gtips/index.php:275
+msgid "Grayscale"
+msgstr "Scala di Grigi"
+
+#: /home/paolo/Development/gtips/index.php:283
+msgid "Contrast"
+msgstr "Contrasto"
+
+#: /home/paolo/Development/gtips/index.php:292
+msgid "Brightness"
+msgstr "Luminosità"
+
+#: /home/paolo/Development/gtips/index.php:302
+msgid "File Url"
+msgstr "URL File"
+
+#: /home/paolo/Development/gtips/index.php:310
+msgid "Select Product"
+msgstr "Seleziona Prodotto"
+
+#: /home/paolo/Development/gtips/index.php:312
+msgid "Choose your option"
+msgstr "Scegli un'opzione"
+
+#: /home/paolo/Development/gtips/index.php:340
+msgid "Preview"
+msgstr "Anteprima"
+
+#: /home/paolo/Development/gtips/index.php:351
+msgid "List tips"
+msgstr "Lista tips"
+
+#: /home/paolo/Development/gtips/index.php:378
+#: /home/paolo/Development/gtips/index.php:395
+#: /home/paolo/Development/gtips/index.php:410
+#: /home/paolo/Development/gtips/index.php:425
+#: /home/paolo/Development/gtips/index.php:440
+#: /home/paolo/Development/gtips/index.php:455
+#: /home/paolo/Development/gtips/index.php:470
+#: /home/paolo/Development/gtips/index.php:485
+#: /home/paolo/Development/gtips/index.php:500
+#: /home/paolo/Development/gtips/index.php:515
+#: /home/paolo/Development/gtips/index.php:530
+#: /home/paolo/Development/gtips/index.php:545
+#: /home/paolo/Development/gtips/index.php:560
+#: /home/paolo/Development/gtips/index.php:575
+#: /home/paolo/Development/gtips/index.php:590
+#: /home/paolo/Development/gtips/index.php:605
+msgid "Forum"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:379
+msgid "Community"
+msgstr ""
+
+#: /home/paolo/Development/gtips/index.php:380
+#: /home/paolo/Development/gtips/index.php:396
+#: /home/paolo/Development/gtips/index.php:411
+#: /home/paolo/Development/gtips/index.php:426
+#: /home/paolo/Development/gtips/index.php:441
+#: /home/paolo/Development/gtips/index.php:456
+#: /home/paolo/Development/gtips/index.php:471
+#: /home/paolo/Development/gtips/index.php:486
+#: /home/paolo/Development/gtips/index.php:501
+#: /home/paolo/Development/gtips/index.php:516
+#: /home/paolo/Development/gtips/index.php:531
+#: /home/paolo/Development/gtips/index.php:546
+#: /home/paolo/Development/gtips/index.php:561
+#: /home/paolo/Development/gtips/index.php:576
+#: /home/paolo/Development/gtips/index.php:591
+#: /home/paolo/Development/gtips/index.php:606
+msgid "Site"
+msgstr "Sito web"
+
+#: /home/paolo/Development/gtips/index.php:620
+msgid "Made with <3 in Italy"
+msgstr "Realizzato con <3 in Italia"
+
+#: /home/paolo/Development/gtips/index.php:626
+msgid "Google and Google logo are trademarks of Google Inc. All rights reserved."
+msgstr "Google e il logo Google sono marchi registrati di Google Inc. Tutti di diritti riservati."
+
+#: /home/paolo/Development/gtips/index.php:627
+msgid "Developed by:"
+msgstr "Sviluppato da:"
