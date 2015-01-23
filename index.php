@@ -106,6 +106,23 @@ textdomain("messages");
 			<label for="last_name"><?php print _("Tags/Short Url"); ?></label>
 		  </div>
 		</div>
+		
+		<div class="row">
+		  <div class="col s12" id="displaymarker2">
+		    <p>
+			<input type="checkbox" name="displaymarker" id="displaymarker"  />
+			<label for="displaymarker"><?php print _("Display Copyright"); ?></label>
+			</p>
+		  </div>
+        </div>
+		
+		<div class="row" id="markercnt" style="display:none">
+		  <div class="input-field col s12">
+			<input name="marker" id="marker" type="text" maxlength="200" class="validate">
+			<label for="marker"><?php print _("Copyright text"); ?></label>
+		  </div>
+		</div>
+		
         <div class="row eventschange">
 		  <div class="col s12">
 			<label><?php print _("Style"); ?></label>

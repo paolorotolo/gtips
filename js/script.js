@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    
+   
+	$('#displaymarker').on( "click", function() {
+        $("#markercnt").toggle();
+    });
+	
     // Check the value of Style's dropdown when it changes;
 	$('.eventschange').bind("DOMSubtreeModified",function(){
         checkDropDown();

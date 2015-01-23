@@ -11,7 +11,11 @@ $files = glob('img/*'); // get all file names
 
 $text = $_POST['text'];
 $subtext  = $_POST['subtext'];
-$marker = "Top Contributor e Astri Nascenti Google Italia";
+if(@$_POST['displaymarker']=="on"){
+	$marker = $_POST['marker'];
+}else{
+	$marker = "";
+}
 	
 if($_POST["style"]=="1"){
 	$originalImage = "sourceimg/".$_POST['imagetype'].".png";	
