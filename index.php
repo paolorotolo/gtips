@@ -84,7 +84,7 @@ textdomain("messages");
 		<div class="col s12">
 			<h1><?php print _("New Tip"); ?></h1>
 			<p><strong><?php print _("Instructions"); ?></strong><br>
-			<?php print _("Include tips (maximum 75 characters for styòe 1 and 3, 200 for style 2)"); ?><br>
+			<?php print _("Include tips (maximum 75 characters for style 1 and 3, 200 for style 2)"); ?><br>
 			<?php print _("Enter the url or the hashtag (you can use"); ?> <a target="_blank" href="http://goo.gl/">goo.gl</a> <?php print _("to shorten the url)"); ?><br>
 			<?php print _("Choose the service"); ?><br><br>
 			</p>
@@ -96,12 +96,133 @@ textdomain("messages");
 	<div class="row">
 	  <form id="makememe" class="col  m6 s12" enctype="multipart/form-data">
 	  <h2><?php print _("Generate"); ?></h2>
+	  
 		<div class="row">
-		  <div class="input-field col m6 s12">
-			<input name="text" id="first_name" type="text" maxlength="200" class="validate">
-			<label for="first_name"><?php print _("Tips"); ?></label>
+		  <div class="col s12" id="advanced2">
+		    <p>
+			<input type="checkbox" name="advanced" id="advanced"  />
+			<label for="advanced"><?php print _("Advanced tips insert"); ?></label>
+			</p>
 		  </div>
-		  <div class="input-field col m6 s12">
+        </div>
+		
+		<div id="advancedtips" style="display:none;">
+		
+			<div class="row">
+			  <div class="input-field col m12 s12">
+				<input name="tipsfirstrow" id="tipsfirstrow" type="text" maxlength="200" class="validate">
+				<label for="tipsfirstrow"><?php print _("Tips first row"); ?></label>
+			  </div>
+			  <div class="col m6 s12">
+				<label><?php print _("Font Size"); ?></label>
+				  <select name="fontsizefirstrow"  id="fontsizefirstrow">
+							<option value="1">1</option>
+				        	<option value="2">2</option>
+				        	<option value="3">3</option>
+				        	<option value="4">4</option>
+				        	<option value="5">5</option>
+				        	<option value="6">6</option>
+				        	<option value="7">7</option>
+				        	<option value="8">8</option>
+				        	<option value="9">9</option>
+				        	<option value="10">10</option>
+				        	<option value="11">11</option>
+				        	<option value="12">12</option>
+				        	<option value="13">13</option>
+				        	<option value="14">14</option>
+				        	<option value="15">15</option>
+				        	<option value="16">16</option>
+				        	<option value="17">17</option>
+				        	<option value="18">18</option>
+				        	<option value="19">19</option>
+				        	<option selected="" value="20">20</option>
+				        	<option value="21">21</option>
+				        	<option value="22">22</option>
+				        	<option value="23">23</option>
+				        	<option value="24">24</option>
+				        	<option value="25">25</option>
+				        	<option value="26">26</option>
+				        	<option value="27">27</option>
+				        	<option value="28">28</option>
+				        	<option value="29">29</option>
+				        	<option value="30">30</option>
+				  </select>
+			  </div>
+			  <div class="col m6 s12">
+				<label><?php print _("Font Family"); ?></label>
+				  <select name="fontsfamilyfirstrow"  id="fontsfamilyfirstrow">
+					<option value="Roboto" selected="">Roboto</option>
+					<option value="Roboto-Black">Roboto-Black</option>
+					<option value="Roboto-Bold">Roboto-Bold</option>
+					<option value="Roboto-Thin">Roboto-Thin</option>
+				  </select>		
+			  </div>
+			</div>	
+
+
+			<div class="row">
+			  <div class="input-field col m12 s12">
+				<input name="tipssecondrow" id="tipssecondrow" type="text" maxlength="200" class="validate">
+				<label for="tipssecondrow"><?php print _("Tips second row"); ?></label>
+			  </div>
+			  <div class="col m6 s12">
+				<label><?php print _("Font Size"); ?></label>
+				  <select name="fontsizesecondrow"  id="fontsizesecondrow">
+							<option value="1">1</option>
+				        	<option value="2">2</option>
+				        	<option value="3">3</option>
+				        	<option value="4">4</option>
+				        	<option value="5">5</option>
+				        	<option value="6">6</option>
+				        	<option value="7">7</option>
+				        	<option value="8">8</option>
+				        	<option value="9">9</option>
+				        	<option value="10">10</option>
+				        	<option value="11">11</option>
+				        	<option value="12">12</option>
+				        	<option value="13">13</option>
+				        	<option value="14">14</option>
+				        	<option value="15">15</option>
+				        	<option value="16">16</option>
+				        	<option value="17">17</option>
+				        	<option value="18">18</option>
+				        	<option value="19">19</option>
+				        	<option selected="" value="20">20</option>
+				        	<option value="21">21</option>
+				        	<option value="22">22</option>
+				        	<option value="23">23</option>
+				        	<option value="24">24</option>
+				        	<option value="25">25</option>
+				        	<option value="26">26</option>
+				        	<option value="27">27</option>
+				        	<option value="28">28</option>
+				        	<option value="29">29</option>
+				        	<option value="30">30</option>
+				  </select>
+			  </div>
+			  <div class="col m6 s12">
+				<label><?php print _("Font Family"); ?></label>
+				  <select name="fontsfamilysecondrow"  id="fontsfamilysecondrow">
+					<option value="Roboto" selected="">Roboto</option>
+					<option value="Roboto-Black">Roboto-Black</option>
+					<option value="Roboto-Bold">Roboto-Bold</option>
+					<option value="Roboto-Thin">Roboto-Thin</option>
+				  </select>		
+			  </div>
+			</div>				
+
+			
+		</div>
+	  
+		<div class="row" id="tips">
+		  <div class="input-field col m12 s12">
+			<input name="text" id="tips" type="text" maxlength="200" class="validate">
+			<label for="tips"><?php print _("Tips"); ?></label>
+		  </div>
+		</div>
+		
+		<div class="row">
+		  <div class="input-field col m12 s12">
 			<input name="subtext" type="text"  maxlength="30" class="validate">
 			<label for="last_name"><?php print _("Tags/Short Url"); ?></label>
 		  </div>

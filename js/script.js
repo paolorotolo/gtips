@@ -3,6 +3,10 @@ $(document).ready(function() {
 	$('#displaymarker').on( "click", function() {
         $("#markercnt").toggle();
     });
+	$('#advanced').on( "click", function() {
+        $("#advancedtips").toggle();
+		$("#tips").toggle();
+    });
 	
     // Check the value of Style's dropdown when it changes;
 	$('.eventschange').bind("DOMSubtreeModified",function(){
