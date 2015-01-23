@@ -33,7 +33,7 @@ textdomain("messages");
     </head>
 
 <body>
-<div class="navbar-fixed">
+<div class="navbar">
   <nav>
     <div class="nav-wrapper cyan">
       <div class="container">
@@ -94,14 +94,14 @@ textdomain("messages");
   
 <div class="container">
 	<div class="row">
-	  <form id="makememe" class="col s6" enctype="multipart/form-data">
+	  <form id="makememe" class="col  m6 s12" enctype="multipart/form-data">
 	  <h2><?php print _("Generate"); ?></h2>
 		<div class="row">
-		  <div class="input-field col s6">
+		  <div class="input-field col m6 s12">
 			<input name="text" id="first_name" type="text" maxlength="200" class="validate">
 			<label for="first_name"><?php print _("Tips"); ?></label>
 		  </div>
-		  <div class="input-field col s6">
+		  <div class="input-field col m6 s12">
 			<input name="subtext" type="text"  maxlength="30" class="validate">
 			<label for="last_name"><?php print _("Tags/Short Url"); ?></label>
 		  </div>

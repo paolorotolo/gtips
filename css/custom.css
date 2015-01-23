@@ -88,3 +88,9 @@ li.tab.col.s3 {
 	height: 100%;
 	width: 100%;
 }
+
+@media only screen and (max-width : 600px) {
+	li.tab.col.m3.s12 {
+		width: 50% !important;
+	}
+}
