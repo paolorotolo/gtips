@@ -80,13 +80,13 @@ li.tab.col.s3 {
 	color: #f8c1c3;
 }
 
-.card-content {
-	height: 20%;
-};
-
 #home {
 	height: 100%;
 	width: 100%;
+}
+
+.card .card-content .card-title {
+	font-size: 19px;
 }
 
 @media only screen and (max-width : 600px) {

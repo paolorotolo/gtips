@@ -15,7 +15,6 @@ $(document).ready(function() {
     
     function checkDropDown(){
         var style = $('#style').find(":selected").val();
-		console.log(style);
         // If style is Small, hide other options;
         if (style === "1"){
             $("#style2").hide(400);

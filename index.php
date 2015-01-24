@@ -1,6 +1,11 @@
 <?php
-$lang = "it_IT";
-if (isset($_GET['lang'])) $lang = $_GET['lang'];
+$lang = "en_EN";
+if (isset($_GET['lang'])){
+	$lang = $_GET['lang'];
+	if($lang == "it"){
+		$lang = "it_IT";
+	}
+}
 putenv("LC_ALL=$lang");
 setlocale(LC_ALL, $lang);
 bindtextdomain("messages", "locale");
@@ -12,7 +17,14 @@ textdomain("messages");
       <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="viewport" content="width=device-width">
-        
+      <link rel="canonical" href="http://www.alessiomoretto.com/progetti/gtips/<?php
+	  if (isset($_GET['lang'])){
+			$lang = $_GET['lang'];
+			if($lang != "en"){
+				print "?lang=".$lang;
+			}
+		}
+	  ?>"/>  
 	  <title><?php print _("Gtips - Create Custom Tips for Google Products"); ?></title>
 	  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -25,6 +37,7 @@ textdomain("messages");
 
 </script>
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	  <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css"  media="screen,projection"/>
 	  <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
 	  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
@@ -42,6 +55,8 @@ textdomain("messages");
         <li><a data-scroll href="#home"><?php print _("Home"); ?></a></li>
         <li><a data-scroll href="#newTip"><?php print _("Tips"); ?></a></li>
         <li><a data-scroll href="#support"><?php print _("Support"); ?></a></li>
+		<li <?php if (isset($_GET['lang'])){if($_GET['lang'] == "it"){print "class='active'";}	}?>><a href="?lang=it"><?php print _("IT"); ?></a></li>
+		<li <?php if (isset($_GET['lang'])){if($_GET['lang'] == "en"){print "class='active'";}	}?>><a href="?lang=en"><?php print _("EN"); ?></a></li>
       </ul>
 	  <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
 	  </div>
@@ -538,10 +553,10 @@ textdomain("messages");
 			  <img class="activator" src="./makememe/sourceimg/mybusiness.png">
 			</div>
 			<div class="card-content">
-			  <span class="card-title activator grey-text text-darken-4">Google MyBusiness<i class="mdi-navigation-more-vert right"></i></span>
+			  <span class="card-title activator grey-text text-darken-4">My Business<i class="mdi-navigation-more-vert right"></i></span>
 			</div>
 			<div class="card-reveal col m12">
-			  <span class="card-title grey-text text-darken-4">Google MyBusiness<i class="mdi-navigation-close right"></i></span>
+			  <span class="card-title grey-text text-darken-4">My Business<i class="mdi-navigation-close right"></i></span>
 			  <p><a href="https://support.google.com/business/?hl=it#topic=4539639"><?php print _("Forum"); ?></a><br>
 			  <a href="https://www.google.it/business/"><?php print _("Site"); ?></a></p>
 			</div>
@@ -583,7 +598,7 @@ textdomain("messages");
 			  <img class="activator" src="./makememe/sourceimg/webmaster.png">
 			</div>
 			<div class="card-content">
-			  <span class="card-title activator grey-text text-darken-4">Google for Webmaster<i class="mdi-navigation-more-vert right"></i></span>
+			  <span class="card-title activator grey-text text-darken-4">Webmaster<i class="mdi-navigation-more-vert right"></i></span>
 			</div>
 			<div class="card-reveal col m12">
 			  <span class="card-title grey-text text-darken-4">Google for Webmaster<i class="mdi-navigation-close right"></i></span>
@@ -644,13 +659,16 @@ textdomain("messages");
 	
 	$("#makememe").submit(function() {//invio form
     var url = "makememe/index.php";
+	
+	$("#memeresult").html(' <div class="progress"><div class="indeterminate"></div></div>');
+	
     $.ajax({
            type: "POST",
            url: url,
            data: $("#makememe").serialize(),
            success: function(data)
            {
-               $("#memeresult").html(data);//mostro risultato
+              // $("#memeresult").html(data);//mostro risultato
            }
          });
     return false;
