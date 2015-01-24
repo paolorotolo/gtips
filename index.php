@@ -668,7 +668,7 @@ textdomain("messages");
            data: $("#makememe").serialize(),
            success: function(data)
            {
-              // $("#memeresult").html(data);//mostro risultato
+               $("#memeresult").html(data);//mostro risultato
            }
          });
     return false;

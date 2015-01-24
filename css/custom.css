@@ -88,6 +88,12 @@ li.tab.col.s3 {
 .card .card-content .card-title {
 	font-size: 19px;
 }
+.card a:hover {
+	color: rgba(30, 136, 229, 0.7);
+}
+.card a {
+	color: #1E88E5;
+}
 
 @media only screen and (max-width : 600px) {
 	li.tab.col.m3.s12 {
