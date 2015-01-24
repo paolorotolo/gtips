@@ -228,7 +228,7 @@ textdomain("messages");
 
 
 
-			<div class="stylestyle3">
+			<div class="stylestyle2">
 				<div class="row">
 				  <div class="input-field col m12 s12">
 					<input name="tipsthirdrow" id="tipsthirdrow" type="text" maxlength="200" class="validate">
@@ -279,7 +279,9 @@ textdomain("messages");
 					  </select>		
 				  </div>
 				</div>
-
+			</div>
+				
+			<div class="stylestyle3">
 				<div class="row">
 				  <div class="input-field col m12 s12">
 					<input name="tipsfourthrow" id="tipsfourthrow" type="text" maxlength="200" class="validate">
@@ -428,7 +430,7 @@ textdomain("messages");
 		<div class="row">
 		  <div class="col s12">
 			<label><?php print _("Select Product"); ?>:</label>
-			  <select name="imagetype">
+			  <select name="imagetype" required>
 				<option value="" disabled selected><?php print _("Choose your option"); ?></option>
 				<option value="googlenow">Google Now</option>
 				<option value="googleplus">Google+</option>

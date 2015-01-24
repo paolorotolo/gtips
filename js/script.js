@@ -1,5 +1,6 @@
 $(document).ready(function() {
    
+    $('.stylestyle2').hide();
     $('.stylestyle3').hide();
    
 	$('#displaymarker').on( "click", function() {
@@ -21,6 +22,7 @@ $(document).ready(function() {
         if (style === "1"){
             $("#style2").hide(400);
 			$('.stylestyle3').hide();
+			$('.stylestyle2').hide();
         
         // If not, show them;
         } else if (style === "2") {
@@ -28,13 +30,15 @@ $(document).ready(function() {
             $("#background").show();
             $("#url").hide();
             $("#grayscale2").show();
+			$('.stylestyle2').show();
 			$('.stylestyle3').show();
             
         } else {
-            $("#style2").show(400);
+            $("#style2").hide(400);
             $("#background").hide();
             $("#url").show();
             $("#grayscale2").hide();
+			$('.stylestyle2').show();
 			$('.stylestyle3').hide();
         };
     };

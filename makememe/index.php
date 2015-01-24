@@ -243,7 +243,8 @@ if($_POST["style"]=="1"){
 	$size = 20; 
 	$angle = 0;
 	$y = 300;
-	$y2 = 360;
+	$y2 = 350;
+	$y3 = 400;
 	$color = imagecolorallocate($im, 255, 255, 255);
 	$fontfile = "font/Roboto-Black.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $text);
@@ -262,6 +263,13 @@ if($_POST["style"]=="1"){
 		$tb = imagettfbbox($size, $angle, $fontfile, $text);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $text);
+								
+		$size = $_POST['fontsizethirdrow']; 
+		$fontfile = "font/".$_POST['fontsfamilythirdrow'].".ttf";
+		$text = $_POST['tipsthirdrow'];
+		$tb = imagettfbbox($size, $angle, $fontfile, $text);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , $text);
 	}else{	
 	
 		if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
@@ -283,7 +291,7 @@ if($_POST["style"]=="1"){
 	$size = 20; 
 	$angle = 0;
 	$x = 75; 
-	$y = 450;
+	$y = 470;
 	$color = imagecolorallocate($im, 230, 230, 230);
 	$fontfile = "font/Roboto.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $subtext);

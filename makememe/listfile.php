@@ -28,9 +28,9 @@ print '<ul class="tabs">
 		<li class="tab col m3 s12"><a href="#android">Android</a></li>
 		<li class="tab col m3 s12"><a href="#chrome">Chrome</a></li>
 		<li class="tab col m3 s12"><a href="#drive">Drive</a></li>
-		<li class="tab col m3 s12"><a href="#gmail">Gmail</a></li>
+		<li class="tab col m3 s12"><a class="active" href="#gmail">Gmail</a></li>
 		<li class="tab col m3 s12"><a href="#google">Search</a></li>
-		<li class="tab col m3 s12"><a class="active" href="#googleplus">Google+</a></li>
+		<li class="tab col m3 s12"><a href="#googleplus">Google+</a></li>
 		<li class="tab col m3 s12"><a href="#hangouts">Hangouts</a></li>
 		<li class="tab col m3 s12"><a href="#maps">Maps</a></li>
 		<li class="tab col m3 s12"><a href="#mybusiness">My Business</a></li>
