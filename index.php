@@ -450,6 +450,24 @@ textdomain("messages");
 				<option value="mybusiness">My Business</option>
 				<option value="analytics">Analytics</option>
 				<option value="drive">Drive</option>
+				<option value="drive">Keep</option>
+				<option value="music">Music</option>
+				<option value="inbox">Inbox</option>
+				<option value="groups">Groups</option>
+				<option value="contacts">Contacts</option>
+				<option value="blogger">Blogger</option>
+				<option value="classroom">Classroom</option>
+				<option value="apps">Apps</option>
+				<option value="chromecast">Chromecast</option>
+				<option value="slides">Slides</option>
+				<option value="sheets">Sheets</option>
+				<option value="documents">Documents</option>
+				<option value="androidwear">Android Wear</option>
+				<option value="translate">Translate</option>
+				<option value="site">Site</option>
+				<option value="fit">Fit</option>
+				<option value="wallet">Wallet</option>
+				<option value="calendar">Calendar</option>
 			  </select>
 		  </div>
 		</div>
