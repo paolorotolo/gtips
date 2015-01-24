@@ -108,7 +108,7 @@ if($_POST["style"]=="1"){
 	
 	if ($_POST['fileurl']!=""){
 		$logoimg = imagecreatefrompng($_POST['fileurl']);//creo immagine logo da mettere sopra
-		if ($_POST['grayscale']=="on"){
+		if (@$_POST['grayscale']=="on"){
 			imagefilter($logoimg, IMG_FILTER_GRAYSCALE);
 		}
 		if ($_POST['brightness']!=""){
@@ -120,7 +120,7 @@ if($_POST["style"]=="1"){
 		imagecopy($im, $logoimg, 0,0,0,0, $sizeimgw, $sizeimgh);
 	}elseif($_POST['background']!="none"){
 		$logoimg = imagecreatefromjpeg("background/bg".$_POST['background'].".jpg");//creo immagine logo da mettere sopra
-		if ($_POST['grayscale']=="on"){
+		if (@$_POST['grayscale']=="on"){
 			imagefilter($logoimg, IMG_FILTER_GRAYSCALE);
 		}
 		if ($_POST['brightness']!=""){
@@ -139,42 +139,74 @@ if($_POST["style"]=="1"){
 	
 	$size = 25; 
 	$angle = 0;
-	$y = 260;
-	$y2 = 300;
-	$y3 = 340;
-	$y4 = 380;
+	$y = 280;
+	$y2 = 320;
+	$y3 = 360;
+	$y4 = 400;
 	$color = imagecolorallocate($im, 255, 255, 255);
 	$fontfile = "font/Roboto-Black.ttf";
-	$tb = imagettfbbox($size, $angle, $fontfile, $text);
-	if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
-		$textel = wordwrap($text, 50, "<br>");
-		$textel = explode("<br>",$textel);
-		
-		$tb = imagettfbbox($size, $angle, $fontfile, $textel[0]);//capto larghezza
-		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $textel[0]);
-		
-		$tb = imagettfbbox($size, $angle, $fontfile, $textel[1]);
-		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $textel[1]);
-		
-		$tb = imagettfbbox($size, $angle, $fontfile, @$textel[2]);
-		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , @$textel[2]);
-		
-		$tb = imagettfbbox($size, $angle, $fontfile, @$textel[3]);
-		$x = ceil(($sizeimgw - $tb[2]) / 2);
-		imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , @$textel[3]);
-	}else{
+	
+	if(@$_POST['advanced']=="on"){
+		$size = $_POST['fontsizefirstrow']; 
+		$fontfile = "font/".$_POST['fontsfamilyfirstrow'].".ttf";
+		$text = $_POST['tipsfirstrow'];
 		$tb = imagettfbbox($size, $angle, $fontfile, $text);
 		$x = ceil(($sizeimgw - $tb[2]) / 2);
 		imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $text);
+		
+		$size = $_POST['fontsizesecondrow']; 
+		$fontfile = "font/".$_POST['fontsfamilysecondrow'].".ttf";
+		$text = $_POST['tipssecondrow'];
+		$tb = imagettfbbox($size, $angle, $fontfile, $text);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $text);
+		
+		$size = $_POST['fontsizethirdrow']; 
+		$fontfile = "font/".$_POST['fontsfamilythirdrow'].".ttf";
+		$text = $_POST['tipsthirdrow'];
+		$tb = imagettfbbox($size, $angle, $fontfile, $text);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , $text);
+		
+		$size = $_POST['fontsizefourthrow']; 
+		$fontfile = "font/".$_POST['fontsfamilyfourthrow'].".ttf";
+		$text = $_POST['tipsfourthrow'];
+		$tb = imagettfbbox($size, $angle, $fontfile, $text);
+		$x = ceil(($sizeimgw - $tb[2]) / 2);
+		imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , $text);
+	}else{
+	
+		$tb = imagettfbbox($size, $angle, $fontfile, $text);
+		if($tb[2]>$sizeimgw-40){//se troppo grande suddivido in 2 righe
+			$textel = wordwrap($text, 50, "<br>");
+			$textel = explode("<br>",$textel);
+			
+			$tb = imagettfbbox($size, $angle, $fontfile, $textel[0]);//capto larghezza
+			$x = ceil(($sizeimgw - $tb[2]) / 2);
+			imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $textel[0]);
+			
+			$tb = imagettfbbox($size, $angle, $fontfile, $textel[1]);
+			$x = ceil(($sizeimgw - $tb[2]) / 2);
+			imagettftext($im,  $size , $angle , $x , $y2 , $color , $fontfile , $textel[1]);
+			
+			$tb = imagettfbbox($size, $angle, $fontfile, @$textel[2]);
+			$x = ceil(($sizeimgw - $tb[2]) / 2);
+			imagettftext($im,  $size , $angle , $x , $y3 , $color , $fontfile , @$textel[2]);
+			
+			$tb = imagettfbbox($size, $angle, $fontfile, @$textel[3]);
+			$x = ceil(($sizeimgw - $tb[2]) / 2);
+			imagettftext($im,  $size , $angle , $x , $y4 , $color , $fontfile , @$textel[3]);
+		}else{
+			$tb = imagettfbbox($size, $angle, $fontfile, $text);
+			$x = ceil(($sizeimgw - $tb[2]) / 2);
+			imagettftext($im,  $size , $angle , $x , $y , $color , $fontfile , $text);
+		}
 	}
 	
 	$size = 20; 
 	$angle = 0;
 	$x = 75; 
-	$y = 430;
+	$y = 450;
 	$color = imagecolorallocate($im, 230, 230, 230);
 	$fontfile = "font/Roboto-Black.ttf";
 	$tb = imagettfbbox($size, $angle, $fontfile, $subtext);
