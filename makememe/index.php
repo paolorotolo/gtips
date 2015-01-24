@@ -32,7 +32,7 @@ if($_POST["style"]=="1"){
 	$fontfile = "font/Roboto-Black.ttf";
 	$angle = 0;
 	$y = 300;
-	$y2 = 380;
+	$y2 = 350;
 	$color = imagecolorallocate($im, 255, 255, 255);
 	
 	if(@$_POST['advanced']=="on"){
